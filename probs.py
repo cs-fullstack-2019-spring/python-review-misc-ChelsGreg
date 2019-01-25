@@ -45,7 +45,9 @@ def prob2():
             result = ("The prod of ", num1, num2, num3, "is",  (num1*num2*num3))
             return result
         elif (operate == "avg"):
-            result = ("The avg of ", num1, num2, num3, "is",  (num1 + num2 + num3 / 3))
+            # Because of order of operations, division performed before addition so you need to use parenthesis so
+            # numbers get added first, then divided by 3
+            result = ("The avg of ", num1, num2, num3, "is",  ((num1 + num2 + num3) / 3))
             return result
         else:
             print("INVALID OPERATION")
